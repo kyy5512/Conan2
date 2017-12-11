@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block sidebar %}
+{% endblock %}
+
+{% block content %}
+
+<table class="table">
+  <thead class="thead-dark">
+    <!--<tr>-->
+      <!--<th scope="col">비디오 1</th>-->
+      <!--<th scope="col">비디오 2</th>-->
+      <!--<th scope="col">비디오 3</th>-->
+    <!--</tr>-->
+  </thead>
+  <tbody>
+  <tr>
+    {% for object in object_list %}
+    {% if forloop.counter|divisibleby:count %}
+    <button class="btn btn-danger">{{forloop.counter}}</button>
+    <tr>
+      <td>{{object.embed_code|safe}}</td>
+        {% if forloop.counter|visibleby:2 %}
+    </tr>
+  </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+
+{% endblock %}
+

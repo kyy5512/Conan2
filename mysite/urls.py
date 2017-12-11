@@ -20,6 +20,8 @@ from django.contrib import admin
 from .views import Home
 from. views import Base
 from. views import Team
+from videos.views import VideoListView
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     #url(r'^$', home, name='home'),
@@ -27,5 +29,6 @@ urlpatterns = [
 
     url(r'^$', Home.as_view()),
     url(r'^base/$', Base.as_view()),
-    url(r'^team/$', Team.as_view())
+    url(r'^team/$', Team.as_view()),
+    url(r'^videos/$', VideoListView.as_view())
 ]
