@@ -1,0 +1,144 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <title>{% block title %}Modern Responsive Website{% endblock %}</title>
+
+
+
+    {% include 'defaults/head.html' %}
+
+</head>
+
+<body>
+
+<!-- 메뉴 -->
+
+<header>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+
+        <a class="navbar-brand" href="#"><img src="{% static 'img/logo.png' %}"></a>
+
+        <button class="navbar-toggler"
+
+                type="button"
+
+                data-toggle="collapse"
+
+                data-target="#navbarTogglerDemo02"
+
+                aria-controls="navbarTogglerDemo02"
+
+                aria-expanded="false"
+
+                aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+             <ul class="navbar-nav">
+
+
+
+                 <li class="nav-item active">
+
+                     <a class="nav-link" href="#">Home</a>
+
+                 </li>
+
+                 <li class="nav-item">
+
+                     <a class="nav-link" href="#services">Services</a>
+
+                 </li>
+
+                 <li class="nav-item">
+
+                     <a class="nav-link" href="#about">About</a>
+
+                 </li>
+
+                 <li class="nav-item">
+
+                     <a class="nav-link" href="#work">Work</a>
+
+                 </li>
+
+                 <li class="nav-item">
+
+                     <a class="nav-link" href="#team">Team</a>
+
+                 </li>
+
+                 <li class="nav-item">
+
+                     <a class="nav-link" href="#testimonials">Testimonials</a>
+
+                 </li>
+
+                 <li class="nav-item">
+
+                     <a class="nav-link" href="#pricing">Pricing</a>
+
+                 </li>
+
+                 <li class="nav-item">
+
+                     <a class="nav-link" href="#stats">Stats</a>
+
+                 </li>
+
+                 <li class="nav-item">
+
+                     <a class="nav-link" href="#clients">Clients</a>
+
+                 </li>
+
+                 <li class="nav-item">
+
+                     <a class="nav-link" href="/videos">Clients</a>
+
+                 </li>
+
+
+             </ul>
+
+         </div>
+
+    </nav>
+
+</header>
+
+
+
+{% block content %}
+
+
+
+{% endblock content %}
+
+
+
+{% include 'defaults/scripts.html' %}
+
+
+
+</body>
+
+</html>

@@ -3,7 +3,7 @@
 
 {% block content %}
 <br>
-<a href="{% url 'video-create' %}" class="btn btn-warning" role="button">Front</a>
+<a href="{% url 'video-create' %}" class="btn btn-warning" role="button">Create</a>
 <br><br>
 
 <table class="table">
@@ -23,7 +23,7 @@
 
             <tr>
                 <td><a href="{% url 'video-detail' object.id %}"> {{ object.title}}</a></td>
-                <td>{{ object.timestamp}}</td>
+                <td>{{ object.timestamp|date:"Y-m-d [H시:i분:s초] " }}</td>
                 <td><a href="{% url 'video-update' object.id %}" class="btn btn-success" role="button">Update</a></td>
             </tr>
 

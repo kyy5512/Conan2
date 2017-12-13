@@ -18,7 +18,7 @@ from django.contrib import admin
 
 
 from .views import Home
-from. views import Base
+from. views import Base, Landingpage
 from. views import Team
 from videos.views import VideoListView
 from videos.views import VideoDetailView,VideoCreateView, VideoUpdateView, VideoDeleteView
@@ -31,6 +31,7 @@ urlpatterns = [
     url(r'^$', Home.as_view()),
     url(r'^base/$', Base.as_view()),
     url(r'^team/$', Team.as_view()),
+    url(r'^index/$', Landingpage.as_view()),
     url(r'^videos/$', VideoListView.as_view(), name='videos'),
     url(r'^videos/(?P<pk>\d+)/$', VideoDetailView.as_view(), name='video-detail'),
     url(r'^videos/create/$', VideoCreateView.as_view(), name ='video-create'),
