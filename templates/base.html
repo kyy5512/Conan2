@@ -34,6 +34,27 @@
 
 <body>
 
+{% block login %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            {% if user.is_active %}
+            <a href ="{% url 'password_change' %}">비밀번호 변경</a>
+            <a href ="{% url 'logout' %}">로그아웃</a>
+
+            {% else %}
+           <a href = "{% url 'login' %}">로그인</a>
+           <a href = "{% url 'register' %}">회원가입</a>
+            {% endif %}
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
+
+
+
 <div class="container">
     <div class="row">
 
@@ -43,7 +64,7 @@
                     <li><a href="/">홈</a></li>
                     <li><a href="{% url 'videos' %}">비디오</a></li>
                     <li><a href="/index/">Landing page</a></li>
-                    <li>게시판</li>
+                    <li><a href="/photo/">포토</a></li>
                 </ul>
             {% endblock %}
 
